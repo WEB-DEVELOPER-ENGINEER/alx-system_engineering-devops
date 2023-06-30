@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+ssh-copy-id ubuntu@109112-web-01
 ssh ubuntu@109112-web-01
