@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-# Client configuration
-echo "PaswordAuthentication no" | ssh username@109112-web-01 "cat >> /etc/ssh/sshd_config"
-ssh-copy-id
+Host 109112-web-01
+    IdentityFile ~/.ssh/school
+    PreferredAuthentications publickey
+    PasswordAuthentication no
