@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # connect to your server using the private key ~/.ssh/school
-cat ~/.ssh/school.pub | ssh ubuntu@109112-web-01 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+ssh-copy-id
 ssh ubuntu@109112-web-01
