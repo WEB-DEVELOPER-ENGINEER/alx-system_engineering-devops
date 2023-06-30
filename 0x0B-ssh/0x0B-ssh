@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# adding SSH public key
+ssh-copy-id ubuntu@109112-web-01
