@@ -1,4 +1,4 @@
-Host 109112-web-01
+Host 34.207.253.78
     IdentityFile ~/.ssh/school
     PreferredAuthentications publickey
     PasswordAuthentication no
