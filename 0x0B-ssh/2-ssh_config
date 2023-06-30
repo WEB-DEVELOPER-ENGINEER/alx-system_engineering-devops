@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Client configuration
+echo "PasswordAuthentication no" | ssh username@109112-web-01 "cat >> /etc/ssh/sshd_config"
+ssh-copy-id
