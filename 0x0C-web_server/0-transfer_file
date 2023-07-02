@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # transfers a file from our client to a server
 if [ -n "$1" ] && [ -n "$2" ] && [ -n "$3" ] && [ -n "$4" ]; then
-	scp $1 $2@$3 -i $4
+	scp $1 $2@$3 -i $4 -o StrictHostKeyChecking=no
 else
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 fi
