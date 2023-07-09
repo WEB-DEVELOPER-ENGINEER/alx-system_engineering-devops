@@ -2,5 +2,5 @@
 # Install Nginx
 
 sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt-get -y install nginx
 echo -e "add_header X-Served-By \$hostname;" | sudo tee -a /etc/nginx/sites-available/default > /dev/null
