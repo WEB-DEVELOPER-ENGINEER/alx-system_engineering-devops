@@ -7,3 +7,7 @@ class { 'nginx':
 nginx::config::server { 'custom_header':
   content => "add_header X-Served-By $hostname;",
 }
+
+-> exec {'run':
+  command => '/usr/sbin/service nginx restart',
+}
