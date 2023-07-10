@@ -4,4 +4,4 @@
 rm /etc/nginx/sites-enabled/default
 sed -i 's/listen [0-9]\{2,5\}/listen 80/g' /etc/nginx/sites-available/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
+service nginx restart
