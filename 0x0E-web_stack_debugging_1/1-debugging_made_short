@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Bash script that configures a server to listen on port 80
+sed -i 's/listen [0-9]\{2,5\}/listen 80/g' /etc/nginx/sites-available/default
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx stop
