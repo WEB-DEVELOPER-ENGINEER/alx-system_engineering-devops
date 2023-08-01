@@ -7,16 +7,16 @@ import sys
 
 if __name__ == "__main__":
     response = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
-            format(sys.argv[1]))
+                            format(sys.argv[1]))
     name = response.json().get('name')
-    response = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.
-            format(sys.argv[1]))
+    res = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'
+                       .format(sys.argv[1]))
     j = 0
-    for i in response.json():
+    for i in res.json():
         if i.get('completed') is True:
             j += 1
     print('Employee {} is done with tasks({}/{}):'
-          .format(name, j, len(response.json())))
-    for i in response.json():
+          .format(name, j, len(res.json())))
+    for i in res.json():
         if i.get('completed'):
-            print('\t{}'.format(i.get('title')))
+            print('\t {}'.format(i.get('title')))
