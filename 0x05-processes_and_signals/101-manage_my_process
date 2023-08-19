@@ -14,7 +14,7 @@ elif [ "$1" = "restart" ]; then
     kill "$(cat /var/run/my_process.pid)"
     rm /var/run/my_process.pid
     ./manage_my_process &
-    pid = $!
+    pid=$!
     echo $pid > /var/run/my_process.pid
     echo "manage_my_process restarted"
 else
